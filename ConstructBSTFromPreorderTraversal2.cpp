@@ -47,18 +47,12 @@ TreeNode<int> *preOrderTree(vector<int> &preOrder)
     vector<int> inOrder(preOrder);
     sort(inOrder.begin(), inOrder.end());
     int itr = 0;
-    // m.clear();
+    
+    m.clear();
     for (int i = 0; i < inOrder.size(); i++)
         m[inOrder[i]] = i;
 
-    // int low=0,high=preOrder.size()-1;
-
-    // while(low<=high)
-    // {
-    //     TreeNode<int>* root=preOrder[itr++];
-    //     int mid=m[root->data];
-
-    // }
+    
 
     return recur(0, preOrder.size() - 1, preOrder, itr);
 }
